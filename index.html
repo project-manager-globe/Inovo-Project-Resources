@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inovo Project</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./index.css" />
+  <link rel="stylesheet" type="text/css" href="./styles.css" /> 
+  <link rel="stylesheet" href="./project.css">
+
+  <style>
+    /* Security Overlay Styling */
+    #loginOverlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: #0B2147;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      color: #333;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      max-width: 400px;
+      width: 90%;
+    }
+    #userName, .pass-wrapper input {
+      width: 100%;
+      border: 1px solid #DADCE0;
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    .pass-wrapper { position: relative; width: 100%; }
+    .toggle-password {
+      position: absolute;
+      right: 12px;
+      top: 22px; 
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #666;
+    }
+    .login-box button {
+      background: #F67D31;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+    }
+    #protectedContent { display: none; }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/268d442577.js" crossorigin="anonymous"></script>
+  <script src="./credentials.js"></script>
+</head>
+
+<body>
+
+  <div id="loginOverlay">
+    <div class="login-box">
+      <img src="./Pimages/ictglobe.png" height="45px" alt="ICTGlobe"><br><br>
+      <h4 style="font-weight: bold; color: #0B2147;">Inovo Project Resources</h4>
+      <p style="font-size: 14px; color: #666;">Provide your credentials to access the Inovo Project Portal.</p>
+      <p style="font-size: 10px; color: #666;"><em><strong>Contact your project manager for your portal user name & password.</strong></em></p>
+      
+      <input type="text" id="userName" placeholder="Username" autofocus>
+      
+      <div class="pass-wrapper">
+        <input type="password" id="passInput" placeholder="Password">
+        <i class="fa-regular fa-eye toggle-password" id="eyeIcon"></i>
+      </div>
+      
+      <button onclick="checkPassword()">Verify & Access</button>
+      <p style="font-size: 10px; color: #666;"><em><strong>User access may be subject to change</strong></em></p>
+      <p id="errMsg" style="color:#d93025; display:none; font-size:13px; margin-top:15px; font-weight: bold;">⚠️ Access Denied.</p>
+    </div>
+  </div>
+
+  <div id="protectedContent">
+    <header class="navbar navbar-default wh_header" id="test">
+      <div class="topcontainer">
+        <div class="bg-primary">
+          <nav class="navbar navbar-expand-md fixed-top navbar-dark">
+            <a class="navbar-brand" href="https://solution-resources-sg.netlify.app/"><img src="./Pimages/ictglobe.png" height="40px" alt="ICTGlobe"> </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="#links" class="myTopButton">Video's</a></li>
+                <li class="nav-item"><a href="#learn" class="myTopButton">Training</a></li>
+                <li class="nav-item"><a href="#docs" class="myTopButton">Documents</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="test" style="display:block;">
+        <section class="content" id="project">
+          <h3 class="content__Intro">Inovo Project Resources</h3>
+          <h3 class="content__subtitle" style="text-align: left;">This web page contains informative resources related to your business solution. <br><br>
+            <strong>How to navigate to content: </strong><br><br>
+            <ol>
+              <li style="padding: 0.2rem 0 0 0.5rem;">Navigate to one of the available sections presented on the top menu.</li>
+              <li style="padding: 0.2rem 0 0 0.5rem;">Each image contains a resource, or list of resources, when hovering over a picture. </li>
+              <li style="padding: 0.2rem 0 0 0.5rem;"> Select a resource and enjoy the content!</li>
+            </ol>
+          </h3>
+        </section>
+
+        <div id="docs" class="top-container" style="padding-top: 47px;">
+          <br><h2 class="content__START">Documents and Diagrams</h2>
+          <h4 class="content__subtitle" style="text-align: left; font-size: large;"><strong>*Some documents may be protected, passwords can be obtained from your project manager.</strong></h4>
+          <div class="wrapper">
+            <div class="media">
+              <div class="layer"><p><a href="./PResources/ICT JML Flowchart.pdf" target="_blank"><strong>ICT JML Flowchart</strong></a></p></div>
+              <img src="./Pimages/paper.jpg" alt="Document" width="250" height="350" />
+            </div>
+            <div class="media">
+              <div class="layer"><p><a href="./PResources/Scenario Framework .pdf" target="_blank"><strong>Scenario Frameworks</strong></a></p></div>
+              <img src="./Pimages/design.jpg" alt="Document" width="250" height="250" />
+            </div>
+            <div class="media">
+              <div class="layer"><p><a href="./PResources/SG Implementation [V9].pdf#toolbar=0" target="_blank"><strong>Project Implementation</strong></a></p></div>
+              <img src="./Pimages/paper.jpg" alt="Document" width="250" height="350" />
+            </div>
+          </div>
+        </div>
+
+        <div id="learn" class="top-container" style="padding-top: 68px;">
+          <h2 class="content__START">Snaptel Training Resources</h2>
+          <h4 class="content__subtitle" style="text-align: left; font-size: large;">This section provides helpful links, documentation and training resources to fully benefit from your Snaptel solution.</h4>
+          <div class="wrapper">
+            <div class="media">
+              <div class="layer">
+                <p>
+                  <a href="https://scribehow.com/page/Snaptel_Customer_Documentation_Guide__HifjJDVwSfm-j6X9lbVzuQ" target="_blank"><strong>Snaptel Customer Guide</strong></a><br>
+                  <a href="https://scribehow.com/page/Snaptel_Reseller_Documentation_Guide__gY4riQZoTju5F2-nssbVRQ" target="_blank"><strong>Snaptel Reseller Guide</strong></a>
+                </p>
+              </div>
+              <img src="./Pimages/office.jpg" alt="Document" width="250" height="250" />
+            </div>
+          </div>
+        </div>
+
+        <div id="links" class="top-container" style="padding-top: 47px;">
+          <br><h2 class="content__Intro"><span class="HOW" style="text-align: left;">Snaptel Video's</span> </h2>
+          <div class="wrapper">
+            <div class="media">
+              <div class="layer"><p>
+              <a href="./PResources/Snaptel Mobile App.mp4" target="_blank"><strong>Snaptel Mobile App</strong></a><br>
+              <!--<a href="https://scribehow.com/page/Snaptel_Reseller_Documentation_Guide__gY4riQZoTju5F2-nssbVRQ" target="_blank"><strong>Snaptel Reseller Guide</strong></a>-->
+            </p></div>
+              <img src="./Pimages/paper.jpg" alt="Document" width="250" height="350" />
+            </div>
+          </div>
+        </div>
+
+        <footer class="navbar navbar-default wh_footer">
+          <div class="footer-container mx-auto">
+            <div><img src="./Pimages/ictglobe.png" alt="ICTLabs" width="100px"> <strong>Projects made easy</strong></div>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // --- SETTINGS ---
+    const webhookURL = "https://discord.com/api/webhooks/1497207847509950587/sbDDBkjfijbKrglVaDDmG-UAov6-DV2InTLRbtL_hjGDG1uPUptJDN6hZMsRESSMnCA7"; 
+
+    const eyeIcon = document.getElementById('eyeIcon');
+    const passInput = document.getElementById('passInput');
+    const nameInput = document.getElementById('userName');
+
+    // Password Visibility Hover
+    eyeIcon.addEventListener('mouseenter', () => { 
+      passInput.type = 'text'; 
+      eyeIcon.classList.replace('fa-eye', 'fa-eye-slash'); 
+    });
+    eyeIcon.addEventListener('mouseleave', () => { 
+      passInput.type = 'password'; 
+      eyeIcon.classList.replace('fa-eye-slash', 'fa-eye'); 
+    });
+
+    // Notification Logic (Includes IP & Browser Fingerprint)
+    async function notifyAccess(user) {
+      if (!webhookURL.startsWith("http")) return;
+      
+      let ip = "Unknown";
+      try { 
+        const res = await fetch('https://api.ipify.org?format=json'); 
+        const data = await res.json(); 
+        ip = data.ip; 
+      } catch (e) {}
+      
+      const browser = navigator.userAgent;
+      
+      const payload = {
+        content: `🛡️ **Access Logged**\n**User:** ${user.toUpperCase()}\n**IP:** ${ip}\n**Browser:** ${browser}\n**Time:** ${new Date().toLocaleString('en-ZA')}`
+      };
+      
+      fetch(webhookURL, { 
+        method: 'POST', 
+        headers: { 'Content-Type': 'application/json' }, 
+        body: JSON.stringify(payload) 
+      });
+    }
+
+    // Login Logic
+    async function checkPassword() {
+      const u = nameInput.value.trim().toLowerCase();
+      const p = passInput.value;
+      
+      // authorizedUsers is loaded from credentials.js
+      if (typeof authorizedUsers !== 'undefined' && authorizedUsers[u] && authorizedUsers[u] === p) {
+        await notifyAccess(u);
+        document.getElementById('loginOverlay').style.display = 'none';
+        document.getElementById('protectedContent').style.display = 'block';
+        sessionStorage.setItem('isLoggedIn', 'true');
+      } else {
+        document.getElementById('errMsg').style.display = 'block';
+        passInput.value = '';
+      }
+    }
+
+    // Persistence on Refresh
+    window.onload = function() {
+      if (sessionStorage.getItem('isLoggedIn') === 'true') {
+        document.getElementById('loginOverlay').style.display = 'none';
+        document.getElementById('protectedContent').style.display = 'block';
+      }
+    };
+
+    // Enter Key Support
+    [passInput, nameInput].forEach(el => { 
+      el.addEventListener("keyup", (e) => { if (e.key === "Enter") checkPassword(); }); 
+    });
+  </script>
+</body>
+</html>
