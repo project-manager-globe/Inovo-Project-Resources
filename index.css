@@ -25,7 +25,7 @@ body {
 	--color-info: #c0c0c2;
 	--color-btn:#e4e4e4;
 	color: var(--color-text);
-	background-color: #d1ffff;
+	background-color: #ffffff;
 	font-family: niveau-grotesk, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
