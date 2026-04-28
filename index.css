@@ -16,7 +16,7 @@
 body {
 	/*background-image: url("https://transparenttextures.com/patterns/scribble-light.png");*/
 	background-image: url("https://transparenttextures.com/patterns/diamond-upholstery.png");
-	width: 100%vw;
+	width: 80%vw;
 	overflow: hidden;
 	overflow-y: scroll;
 	margin: 0;
@@ -295,6 +295,7 @@ a:hover {
 	position: relative;
 	font-size: 2rem;
 	color: #0051ff;
+	text-align: left;
 }
 
 .content__START{
