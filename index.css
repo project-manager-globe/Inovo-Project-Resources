@@ -346,9 +346,10 @@ a:hover {
 .content__subtitle2 {
 	font-family: niveau-grotesk, sans-serif;
 	align-self: end;
+    font-weight: 400;
     font-size:1.1rem;
 	padding: 0.2rem 0 0 1.5rem;
-	color: #0051ff;
+	color: #1b191a;
 	text-align: center;
 }
 .content__foot {
