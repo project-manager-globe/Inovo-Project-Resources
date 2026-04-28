@@ -14,7 +14,8 @@
 
 
 body {
-	background-image: url("https://transparenttextures.com/patterns/scribble-light.png");
+	/*background-image: url("https://transparenttextures.com/patterns/scribble-light.png");*/
+	background-image: url("https://transparenttextures.com/patterns/cross-scratches.png");
 	width: 100%vw;
 	overflow: hidden;
 	overflow-y: scroll;
@@ -25,7 +26,7 @@ body {
 	--color-info: #c0c0c2;
 	--color-btn:#e4e4e4;
 	color: var(--color-text);
-	background-color: #ffffff;
+	background-color: #bdbdbd;
 	font-family: niveau-grotesk, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
