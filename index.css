@@ -26,7 +26,7 @@ body {
 	--color-info: #c0c0c2;
 	--color-btn:#e4e4e4;
 	color: var(--color-text);
-	background-color: #e4e3e3d0;
+	background-color: #e4e3e3;
 	font-family: niveau-grotesk, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -340,9 +340,17 @@ a:hover {
 	align-self: end;
     font-size:1.1rem;
 	padding: 0.2rem 0 0 1.5rem;
-	color: #0051ff;
+	color: #1b191a;
 }
 
+.content__subtitle2 {
+	font-family: niveau-grotesk, sans-serif;
+	align-self: end;
+    font-size:1.1rem;
+	padding: 0.2rem 0 0 1.5rem;
+	color: #0051ff;
+	text-align: center;
+}
 .content__foot {
 	text-align: center;
 	color: var(--color-info);
