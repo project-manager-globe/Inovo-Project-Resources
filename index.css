@@ -16,7 +16,7 @@
 body {
 	/*background-image: url("https://transparenttextures.com/patterns/scribble-light.png");*/
 	background-image: url("https://transparenttextures.com/patterns/diamond-upholstery.png");
-	width: 80%vw;
+	width: 60%vw;
 	overflow: hidden;
 	overflow-y: scroll;
 	margin: 0;
