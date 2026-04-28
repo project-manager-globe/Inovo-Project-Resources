@@ -23,9 +23,9 @@ body {
 	--color-bg: #F9FAFE;
 	--color-link: #111;
 	--color-info: #c0c0c2;
-	--color-btn:#6d79a1;
+	--color-btn:#e4e4e4;
 	color: var(--color-text);
-	background-color: #c5c5c5;
+	background-color: #d1ffff;
 	font-family: niveau-grotesk, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
