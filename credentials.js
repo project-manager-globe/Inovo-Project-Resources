@@ -1,5 +1,15 @@
 const authorizedUsers = {
   "estelle": "Estelle2026!",
+  "jolene":"jgGlobe001",
+  "gregorio":"gregNetworks001",
+  "hannes":"hvGlobe002",
+  "eugene":"esGlobe003",
+  "lucien":"lbGlobe004",
+  "craig":"cgGlobe005",
+  "joe":"jjGlobe006",
+  "ronel":"rlGlobe007",
+  "oscar":"omInovo001",
+  "jan":"jkInovo002",
+  "quintin":"qmInovo003",
   "guest": "welcome2026",
-  "gregorio":"gregNetworks001"
 };
